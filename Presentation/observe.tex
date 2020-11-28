@@ -1,0 +1,61 @@
+\section{Security Analysis}
+
+\begin{frame}{Boomerang Attack}
+\begin{itemize}
+    \item Special Differential Cryptanalysis
+    \item two differentials for the two sub ciphers $C_0$ and $C_1$ obtained from cipher $C$ 
+    \item $C=C_{0} \circ C_{1}$
+    \item shorter differentials have more better probabilities $\implies$ improved results 
+\end{itemize}
+\begin{block}{Theorems}
+\textbf{Theorem 1:}  Four rounds of Mysterion-128 has at least 45 active S-boxes.  \\
+\textbf{Theorem 2:} Four rounds of Mysterion-256 has at least 81 active S-boxes. \\
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Boomerang Attack}
+\begin{enumerate}
+    \item For 128 bit : \\
+    We use the Theorem 1  to find the max differential prob that can be obtained : 
+    $$\text{Pr}_{diff}(4R) \leq \text{Pr}_{diff}^{max}(Sbox)^{45} = (2^{-2})^{45} = 2^{-90} $$
+    $$\implies \text{Pr}_{diff}^{max}(8R) = \text{Pr}_{diff}(4R) *\text{Pr}_{diff}(4R)  = 2^{-90}*2^{-90} = 2^{-180}  
+    $$
+    the Pr obtained is way less that  brute force probability ($2^{-128}$). \\
+    
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Boomerang Attack}
+    \begin{enumerate}
+        \item For 256 bit: \\
+    We use the Theorem 2  to find the max differential prob that can be obtained : 
+    $$\text{Pr}_{diff}^{max}(8R) = \text{Pr}_{diff}(4R) *\text{Pr}_{diff}(4R)  = 2^{-81*2}*2^{-81*2} = 2^{-324} 
+    % >> 2^{-256} 
+    $$
+    the Pr obtained is way less that  brute force probability ($2^{-256}$). \\
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Integral Attack}
+
+    \begin{itemize}
+        \item Integral attacks tries to extract information about the key by observing the sum of ciphertext values.
+        \item We may find integral property upto 4 rounds, and then we can mount this attack from 7-9 rounds depending on the key size. 
+        \item Sufficient security margin for the full cipher, since there are 12 and 16 rounds for Mysterion -128 and Mysterion-256.
+    \end{itemize}
+\\\\
+\textbf{Division Property - EUROCRYPT 2015}
+It allows to construct more efficient integral distinguishers exploiting the limited algebraic degree of reduced ciphers.
+
+\end{frame}
+
+\begin{frame}{Invariant subspace Attack}
+\begin{itemize}
+    \item LS Design models are vulnerable to this attack 
+    \item This was identified by performing an exhaustive analysis on a 32 bit block
+    \item Addition of Shiftcolumns operation to LS design models (which are called as XLS models) ,this attack can no longer be done 
+    \item Shiftcolumns operation prevents the propagation of subspace found for the L-box with high probability
+\end{itemize}
+
+\end{frame}

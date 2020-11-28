@@ -1,0 +1,67 @@
+\documentclass[hyperref={pdfpagelabels=false}]{beamer}
+\usepackage{lmodern}
+\usepackage[demo]{graphicx}
+% \usepackage{caption}
+% \usepackage{subcaption}
+\usetheme{Frankfurt}
+\usecolortheme{crane}
+
+\title{Mysteries of Mysterion}  
+\author{\texttt{CrypTrio}} 
+\institute{
+	\includegraphics[scale=0.08]{logoiitbh}
+	
+	Department of \texttt{<Computer Science>}\\ 
+	Indian Institute of Technology Bhilai}
+
+\begin{document}
+	\begin{frame}
+	\titlepage
+
+\end{frame} 
+
+\AtBeginSection[]
+{
+	\begin{frame}<beamer>
+	\frametitle{Outline}
+	\tableofcontents[currentsection]
+\end{frame}
+}
+
+\input{intro}
+\input{spec}
+\input{observe}
+\input{bpnominate}
+\input{conclu}
+
+\begin{frame}{Links}
+    \begin{block}{}
+	\begin{itemize}
+		\item Implementation Source Code Link: \url{https://github.com/Meghana-12/Mysterion}
+		\item Google Collab Link: \url{https://colab.research.google.com/drive/1bmUl7wT4U13XY6n8cB2sV-f5cAsr0_vV?usp=sharing}
+		\item Online Tool Link: \url{ https://mysterion-tool.herokuapp.com/}
+		\item Online Tool Source code: \url{https://github.com/RotonEvan/mysterious-ions}
+	\end{itemize}
+\end{block}
+\end{frame}
+% \begin{frame}{References}
+% % \begin{block}{References}
+% 	\begin{itemize}
+% 		\item 
+% 		\item  
+% 		\item
+% 	\end{itemize}
+% % \end{block}
+% \end{frame}
+
+\begin{frame}{Thanks}
+\begin{block}{Team Members}
+	\begin{itemize}
+		\item Gundu Shreya
+		\item Varanasi Meghana
+		\item Debajyoti Halder
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\end{document}
