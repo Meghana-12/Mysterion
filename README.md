@@ -22,7 +22,7 @@ Online Tool : https://mysterion-tool.herokuapp.com/
 
 Online Tool Github Repo : https://github.com/RotonEvan/mysterious-ions
 
-## Team Cryptrio
+## Team CrypTrio
 - Gundu Shreya
 - Varanasi Meghana
 - Debajyoti Halder
