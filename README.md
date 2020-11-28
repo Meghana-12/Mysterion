@@ -18,6 +18,8 @@ Term Paper : https://raw.githubusercontent.com/Meghana-12/Mysterion/main/Term_Pa
 
 Presentation : https://raw.githubusercontent.com/Meghana-12/Mysterion/main/Presentation.pdf
 
+Notebook : https://colab.research.google.com/drive/1bmUl7wT4U13XY6n8cB2sV-f5cAsr0_vV?usp=sharing
+
 Online Tool : https://mysterion-tool.herokuapp.com/
 
 Online Tool Github Repo : https://github.com/RotonEvan/mysterious-ions
